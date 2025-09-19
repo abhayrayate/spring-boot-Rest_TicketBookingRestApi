@@ -1,5 +1,8 @@
 package in.abhayit.binding;
 
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Customer {
 
 	private String name;
@@ -23,6 +26,13 @@ public class Customer {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", email=" + email + ", gender=" + gender + "]";
+	}
+	
+	
+	
 	
 	
 }
